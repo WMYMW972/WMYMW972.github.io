@@ -2,38 +2,50 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>资源共享</title>
   <style>
-    body {
-      background: #c0c0c0;
+    /* Reset 基础样式 */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body, h1, h2, p, ul, li, button {
       margin: 0;
       padding: 0;
-      font-family: "MS Sans Serif", sans-serif;
+    }
+
+    body {
+      background: #d3d3d3; /* 更标准的灰色 */
+      font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
       color: #000;
     }
+
     /* 页面主框架 */
     .page-frame {
-        max-width: 900px;
-        margin: 30px auto;
-        padding: 20px;
-        background: #d4d0c8;
-        border: 2px solid #808080;
-        box-shadow: inset -1px -1px #fff, inset 1px 1px #808080;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        min-height: 100vh;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #e0e0e0; /* 更统一的背景色 */
+      border: 2px solid #808080;
+      box-shadow: inset -1px -1px #fff, inset 1px 1px #808080;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 100vh;
     }
+
     .content-area {
-        flex: 1;
+      flex: 1;
     }
+
+    /* 顶部导航栏 */
     .top-nav ul {
       display: flex;
       list-style: none;
       margin: 0;
       padding: 0;
     }
+
     .top-nav li a {
       display: block;
       padding: 8px 16px;
@@ -41,10 +53,12 @@
       color: #000;
       border-right: 1px solid #808080;
     }
+
     .top-nav li a:hover {
-      background: #c0c0c0;
+      background: #d3d3d3;
       color: #000080;
     }
+
     /* 页面标题 */
     .site-header h1 {
       font-size: 24px;
@@ -53,23 +67,27 @@
       margin-bottom: 20px;
       text-shadow: 1px 1px #fff;
     }
+    h2 {
+      margin-bottom: 10px;
+    }
     /* 功能按钮组 */
     .button-group {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
       padding: 10px;
-      background: #c0c0c0;
+      background: #d3d3d3;
       border: 2px solid #808080;
       box-shadow: inset -1px -1px #fff, inset 1px 1px #808080;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
     .option-btn {
-      flex: 1;
+      flex: 1 1 40%;
       padding: 12px 10px;
       border: 2px solid;
       border-color: #ffffff #808080 #808080 #ffffff;
-      background: #c0c0c0;
+      background: #d3d3d3;
       color: #000;
       font-size: 16px;
       font-weight: bold;
@@ -77,33 +95,37 @@
       box-shadow: 1px 1px 0px #000;
       text-align: center;
     }
+
     .option-btn:hover {
-      background: #d4d0c8;
+      background: #e0e0e0;
     }
+
     .option-btn:active {
       border-color: #808080 #ffffff #ffffff #808080;
-      background: #c0c0c0;
+      background: #d3d3d3;
       transform: translateY(1px);
       box-shadow: none;
     }
+
     /* 内容说明区 */
     .description {
       font-size: 14px;
-      background: #ffffe1;
+      background: #fffacd; /* 更标准的浅黄 */
       padding: 15px;
       border: 2px solid #808080;
       box-shadow: inset -1px -1px #fff, inset 1px 1px #808080;
       margin-bottom: 40px;
     }
+
     /* 页脚声明 */
     .copyright {
       text-align: center;
       font-size: 12px;
       padding: 10px;
-      background: #d4d0c8;
+      background: #e0e0e0;
       border-top: 2px solid #808080;
       box-shadow: inset -1px -1px #fff, inset 1px 1px #808080;
-      font-family: "MS Sans Serif", sans-serif;
+      font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
       color: #000;
       margin-top: 40px;
     }
@@ -115,6 +137,7 @@
     <div class="site-header">
       <h1>旨在为所有人提供方便的信息，资源获取服务！</h1>
     </div>
+
     <!-- 内容区 -->
     <div class="content-area">
       <h2 style="color:#000080; text-decoration: underline;">功能选择</h2>
@@ -124,14 +147,17 @@
         <button class="option-btn">信息媒体</button>
         <button class="option-btn">操作系统</button>
       </div>
+
       <div class="description">
         本网站属测试版，如有任何使用问题或建议欢迎联系。
       </div>
+
       <!-- 滚动空间 -->
       <div class="spacer" style="height: 600px;"></div>
     </div>
   </div>
-  <!-- 页脚声明：放在整个页面最底部 -->
+
+  <!-- 页脚声明 -->
   <footer class="copyright">
     &copy; 本网站内资源等一切内容均取自互联网，如有侵权请联系删除。
   </footer>
