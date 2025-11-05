@@ -8,48 +8,34 @@
     <style>
         /* 重置和基础设置 */
         html, body {
-            height: 100%;
             margin: 0;
             padding: 0;
-            /* 适配手机深色背景 */
-            background: #1c1c1c !important; 
+            height: auto; /* 不强制撑满视口 */
+            background: #1c1c1c;
             font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
-            color: #e0e0e0 !important;
+            color: #e0e0e0;
         }
-
         /* 页面框架 - 居中和粘性页脚容器 */
         .page-frame {
-            display: flex;
-            flex-direction: column;
-            min-height: 100%; 
             max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
-            /* 深色内容区背景 */
-            background: #2c2c2c !important; 
+            padding: 60px 20px 40px; /* 顶部留白加大，底部适中 */
+            background: #2c2c2c;
             border: 2px solid #555555;
             box-shadow: inset -2px -2px #444444, inset 2px 2px #000000;
         }
-
         .site-header h1 {
             font-size: 24px;
-            /* 浅蓝标题 */
-            color: #79a6e0 !important; 
+            color: #79a6e0 !important;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px; /* 拉开标题与功能区间距 */
             text-shadow: 1px 1px #000;
         }
-
-        .content-area {
-            flex: 1; /* 占据剩余空间，将页脚推到底部 */
-        }
-
         h2 {
             margin-bottom: 10px;
             color: #e0e0e0 !important;
             text-decoration: underline;
         }
-
         .button-group {
             display: flex;
             flex-wrap: wrap;
@@ -60,9 +46,8 @@
             background: #3a3a3a !important; 
             border: 2px solid #555555;
             box-shadow: inset -2px -2px #444444, inset 2px 2px #000000;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
-
         .option-btn {
             flex: 1 1 40%;
             padding: 12px 10px;
@@ -77,18 +62,15 @@
             box-shadow: 1px 1px 0px #000;
             text-align: center;
         }
-
         .option-btn:hover {
             background: #4a4a4a !important;
         }
-
         .option-btn:active {
             border-color: #000000 #555555 #555555 #000000;
             background: #3a3a3a !important;
             transform: translateY(1px);
             box-shadow: none;
         }
-
         .description {
             font-size: 14px;
             /* 深蓝说明区 */
@@ -97,27 +79,25 @@
             padding: 15px;
             border: 2px solid #555555;
             box-shadow: inset -2px -2px #444444, inset 2px 2px #000000;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
-
         .copyright {
+            background: #1c1c1c;
+            color: #e0e0e0;
             text-align: center;
-            font-size: 12px;
-            padding: 10px;
-            background: #2c2c2c !important;
-            border-top: 2px solid #555555;
-            box-shadow: inset -2px -2px #444444, inset 2px 2px #000000;
+            font-size: 13px;
+            padding: 16px 12px;
+            border: 1px solid #444444;
+            border-radius: 4px;
+            box-shadow: inset 0 0 0 1px #2c2c2c;
             font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
-            color: #e0e0e0 !important;
-            margin-top: 0; 
+            margin-top: 405px; /* 不再强制拉底，保持自然跟随内容 */
         }
-
         @media (max-width: 768px) {
             .option-btn {
                 flex: 1 1 100%;
             }
         }
-
         /* **移除强制覆盖的 prefers-color-scheme: dark 媒体查询，以减少冲突** */
     </style>
 </head>
