@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=0.3,maximum-scale=1.0,minimum-scale=0.3">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>资源共享</title>
   <style>
-    /* Reset 基础样式 */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -15,19 +14,18 @@
     }
 
     body {
-      background: #cccccc; /* 更稳定的灰色 */
+      background: rgb(204, 204, 204); /* 浅灰 */
       font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
       color: #000;
     }
 
-    /* 页面主框架 */
     .page-frame {
       max-width: 900px;
       margin: 30px auto;
       padding: 20px;
-      background: #dddddd; /* 更统一的背景色 */
-      border: 2px solid #666;
-      box-shadow: inset -2px -2px #fff, inset 2px 2px #666;
+      background: rgb(221, 221, 221); /* 内容区背景 */
+      border: 2px solid rgb(102, 102, 102);
+      box-shadow: inset -2px -2px #fff, inset 2px 2px rgb(102, 102, 102);
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -38,10 +36,9 @@
       flex: 1;
     }
 
-    /* 页面标题 */
     .site-header h1 {
       font-size: 24px;
-      color: #000080;
+      color: rgb(0, 0, 128); /* 深蓝标题 */
       text-align: center;
       margin-bottom: 20px;
       text-shadow: 1px 1px #fff;
@@ -51,16 +48,15 @@
       margin-bottom: 10px;
     }
 
-    /* 功能按钮组 */
     .button-group {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
       padding: 10px;
-      background: #cccccc;
-      border: 2px solid #666;
-      box-shadow: inset -2px -2px #fff, inset 2px 2px #666;
+      background: rgb(204, 204, 204);
+      border: 2px solid rgb(102, 102, 102);
+      box-shadow: inset -2px -2px #fff, inset 2px 2px rgb(102, 102, 102);
       margin-bottom: 40px;
     }
 
@@ -68,8 +64,8 @@
       flex: 1 1 40%;
       padding: 12px 10px;
       border: 2px solid;
-      border-color: #ffffff #666 #666 #ffffff;
-      background: #cccccc;
+      border-color: #ffffff rgb(102, 102, 102) rgb(102, 102, 102) #ffffff;
+      background: rgb(204, 204, 204);
       color: #000;
       font-size: 16px;
       font-weight: bold;
@@ -79,46 +75,43 @@
     }
 
     .option-btn:hover {
-      background: #dddddd;
+      background: rgb(221, 221, 221);
     }
 
     .option-btn:active {
-      border-color: #666 #ffffff #ffffff #666;
-      background: #cccccc;
+      border-color: rgb(102, 102, 102) #ffffff #ffffff rgb(102, 102, 102);
+      background: rgb(204, 204, 204);
       transform: translateY(1px);
       box-shadow: none;
     }
 
-    /* 内容说明区 */
     .description {
       font-size: 14px;
-      background: #fdf6c9; /* 更柔和的浅黄 */
+      background: rgb(253, 246, 201); /* 浅黄说明区 */
       padding: 15px;
-      border: 2px solid #666;
-      box-shadow: inset -2px -2px #fff, inset 2px 2px #666;
+      border: 2px solid rgb(102, 102, 102);
+      box-shadow: inset -2px -2px #fff, inset 2px 2px rgb(102, 102, 102);
       margin-bottom: 40px;
     }
 
-    /* 页脚声明 */
     .copyright {
       text-align: center;
       font-size: 12px;
       padding: 10px;
-      background: #dddddd;
-      border-top: 2px solid #666;
-      box-shadow: inset -2px -2px #fff, inset 2px 2px #666;
+      background: rgb(221, 221, 221);
+      border-top: 2px solid rgb(102, 102, 102);
+      box-shadow: inset -2px -2px #fff, inset 2px 2px rgb(102, 102, 102);
       font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
       color: #000;
       margin-top: 40px;
     }
 
-    /* 移动端优化 */
     @media (max-width: 768px) {
       body {
-        background: #cccccc;
+        background: rgb(204, 204, 204);
       }
       .page-frame {
-        background: #dddddd;
+        background: rgb(221, 221, 221);
       }
       .option-btn {
         flex: 1 1 100%;
@@ -128,14 +121,12 @@
 </head>
 <body>
   <div class="page-frame">
-    <!-- 页面标题 -->
     <div class="site-header">
       <h1>旨在为所有人提供方便的信息，资源获取服务！</h1>
     </div>
 
-    <!-- 内容区 -->
     <div class="content-area">
-      <h2 style="color:#000080; text-decoration: underline;">功能选择</h2>
+      <h2 style="color: rgb(0, 0, 128); text-decoration: underline;">功能选择</h2>
       <div class="button-group">
         <button class="option-btn">软件资源</button>
         <button class="option-btn">各类书籍</button>
@@ -147,12 +138,10 @@
         本网站属测试版，如有任何使用问题或建议欢迎联系。
       </div>
 
-      <!-- 滚动空间 -->
       <div class="spacer" style="height: 600px;"></div>
     </div>
   </div>
 
-  <!-- 页脚声明 -->
   <footer class="copyright">
     &copy; 本网站内资源等一切内容均取自互联网，如有侵权请联系删除。
   </footer>
