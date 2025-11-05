@@ -1,154 +1,146 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="color-scheme" content="light only">
-  <title>资源共享</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background: rgb(204, 204, 204);
-      font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
-      color: #000;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="color-scheme" content="light only"> 
+    <title>资源共享</title>
+    <style>
+        /* 重置和基础设置 */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            /* 适配手机深色背景 */
+            background: #1c1c1c !important; 
+            font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
+            color: #e0e0e0 !important;
+        }
 
-    .page-frame {
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background: rgb(221, 221, 221);
-      border: 2px solid rgb(102, 102, 102);
-      box-shadow: inset -2px -2px #fff, inset 2px 2px rgb(102, 102, 102);
-    }
+        /* 页面框架 - 居中和粘性页脚容器 */
+        .page-frame {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%; 
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            /* 深色内容区背景 */
+            background: #2c2c2c !important; 
+            border: 2px solid #555555;
+            box-shadow: inset -2px -2px #444444, inset 2px 2px #000000;
+        }
 
-    .site-header h1 {
-      font-size: 24px;
-      color: rgb(0, 0, 128);
-      text-align: center;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px #fff;
-    }
+        .site-header h1 {
+            font-size: 24px;
+            /* 浅蓝标题 */
+            color: #79a6e0 !important; 
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px #000;
+        }
 
-    .content-area {
-      flex: 1;
-    }
+        .content-area {
+            flex: 1; /* 占据剩余空间，将页脚推到底部 */
+        }
 
-    h2 {
-      margin-bottom: 10px;
-      color: rgb(0, 0, 128);
-      text-decoration: underline;
-    }
+        h2 {
+            margin-bottom: 10px;
+            color: #e0e0e0 !important;
+            text-decoration: underline;
+        }
 
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
-      background: rgb(204, 204, 204);
-      border: 2px solid rgb(102, 102, 102);
-      box-shadow: inset -2px -2px #fff, inset 2px 2px rgb(102, 102, 102);
-      margin-bottom: 40px;
-    }
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            /* 按钮组背景 */
+            background: #3a3a3a !important; 
+            border: 2px solid #555555;
+            box-shadow: inset -2px -2px #444444, inset 2px 2px #000000;
+            margin-bottom: 40px;
+        }
 
-    .option-btn {
-      flex: 1 1 40%;
-      padding: 12px 10px;
-      border: 2px solid;
-      border-color: #ffffff rgb(102, 102, 102) rgb(102, 102, 102) #ffffff;
-      background: rgb(204, 204, 204);
-      color: #000;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 1px 1px 0px #000;
-      text-align: center;
-    }
+        .option-btn {
+            flex: 1 1 40%;
+            padding: 12px 10px;
+            border: 2px solid;
+            border-color: #555555 #000000 #000000 #555555; 
+            /* 按钮背景和文字颜色 */
+            background: #3a3a3a !important; 
+            color: #ffffff !important; 
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 1px 1px 0px #000;
+            text-align: center;
+        }
 
-    .option-btn:hover {
-      background: rgb(221, 221, 221);
-    }
+        .option-btn:hover {
+            background: #4a4a4a !important;
+        }
 
-    .option-btn:active {
-      border-color: rgb(102, 102, 102) #ffffff #ffffff rgb(102, 102, 102);
-      background: rgb(204, 204, 204);
-      transform: translateY(1px);
-      box-shadow: none;
-    }
+        .option-btn:active {
+            border-color: #000000 #555555 #555555 #000000;
+            background: #3a3a3a !important;
+            transform: translateY(1px);
+            box-shadow: none;
+        }
 
-    .description {
-      font-size: 14px;
-      background: rgb(253, 246, 201);
-      padding: 15px;
-      border: 2px solid rgb(102, 102, 102);
-      box-shadow: inset -2px -2px #fff, inset 2px 2px rgb(102, 102, 102);
-      margin-bottom: 40px;
-    }
+        .description {
+            font-size: 14px;
+            /* 深蓝说明区 */
+            background: #003366 !important; 
+            color: #ffffff !important;
+            padding: 15px;
+            border: 2px solid #555555;
+            box-shadow: inset -2px -2px #444444, inset 2px 2px #000000;
+            margin-bottom: 40px;
+        }
 
-    .copyright {
-      text-align: center;
-      font-size: 12px;
-      padding: 10px;
-      background: rgb(221, 221, 221);
-      border-top: 2px solid rgb(102, 102, 102);
-      box-shadow: inset -2px -2px #fff, inset 2px 2px rgb(102, 102, 102);
-      font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
-      color: #000;
-      margin-top: 40px;
-    }
+        .copyright {
+            text-align: center;
+            font-size: 12px;
+            padding: 10px;
+            background: #2c2c2c !important;
+            border-top: 2px solid #555555;
+            box-shadow: inset -2px -2px #444444, inset 2px 2px #000000;
+            font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
+            color: #e0e0e0 !important;
+            margin-top: 0; 
+        }
 
-    @media (max-width: 768px) {
-      .option-btn {
-        flex: 1 1 100%;
-      }
-    }
+        @media (max-width: 768px) {
+            .option-btn {
+                flex: 1 1 100%;
+            }
+        }
 
-    @media (prefers-color-scheme: dark) {
-      body,
-      .page-frame,
-      .button-group,
-      .option-btn,
-      .description,
-      .copyright {
-        background: rgb(204, 204, 204) !important;
-        color: #000 !important;
-        border-color: rgb(102, 102, 102) !important;
-        box-shadow: inset -2px -2px #fff, inset 2px 2px rgb(102, 102, 102) !important;
-      }
-    }
-  </style>
+        /* **移除强制覆盖的 prefers-color-scheme: dark 媒体查询，以减少冲突** */
+    </style>
 </head>
 <body class="custom-body">
-  <div class="page-frame">
-    <div class="site-header">
-      <h1>旨在为所有人提供方便的信息，资源获取服务！</h1>
+    <div class="page-frame">
+        <div class="site-header">
+            <h1>旨在为所有人提供方便的信息，资源获取服务！</h1>
+        </div>
+        <div class="content-area">
+            <h2>功能选择</h2>
+            <div class="button-group">
+                <button class="option-btn">软件资源</button>
+                <button class="option-btn">各类书籍</button>
+                <button class="option-btn">信息媒体</button>
+                <button class="option-btn">操作系统</button>
+            </div>
+            <div class="description">
+                本网站属测试版，如有任何使用问题或建议欢迎联系。
+            </div>
+        </div>
+        <footer class="copyright">
+            &copy; 本网站内资源等一切内容均取自互联网，如有侵权请联系删除。
+        </footer>
     </div>
-
-    <div class="content-area">
-      <h2>功能选择</h2>
-      <div class="button-group">
-        <button class="option-btn">软件资源</button>
-        <button class="option-btn">各类书籍</button>
-        <button class="option-btn">信息媒体</button>
-        <button class="option-btn">操作系统</button>
-      </div>
-
-      <div class="description">
-        本网站属测试版，如有任何使用问题或建议欢迎联系。
-      </div>
-
-      <div class="spacer" style="height: 600px;"></div>
-    </div>
-
-    <footer class="copyright">
-      &copy; 本网站内资源等一切内容均取自互联网，如有侵权请联系删除。
-    </footer>
-  </div>
 </body>
 </html>
