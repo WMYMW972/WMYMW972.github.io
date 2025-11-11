@@ -1,127 +1,34 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="color-scheme" content="light only">
-    <title>资源共享</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            background: #1c1c1c;
-            font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            color: #e0e0e0;
-        }
-        .page-frame {
-            max-width: 750px;
-            height: 825px;/* 整体框固定高度 */
-            margin: 13px auto 0 auto; /* 顶部留白20px，居中显示 */
-            padding: 60px 20px 40px;
-            background: #2c2c2c;
-            border: 2px solid #555555;
-            box-shadow: inset -2px -2px #444444, inset 2px 2px #000000;
-        }
-        .site-header {
-        margin-bottom: 40px;
-        }
-        .site-header h1 {
-        font-size: 24px;
-        color: #79a6e0;
-        text-align: center;
-        margin: 0;
-        text-shadow: 1px 1px #000;
-        }
-        h2 {
-        margin-bottom: 20px;
-        color: #e0e0e0;
-        text-decoration: underline;
-        }
-        .button-group {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding: 10px;
-        background: #3a3a3a;
-        border: 2px solid #555555;
-        box-shadow: inset -2px -2px #444444, inset 2px 2px #000000;
-        margin-bottom: 60px;
-        }
-        .option-btn {
-            transition: background 0.3s ease, transform 0.2s ease;
-            flex: 1 1 40%;
-            padding: 12px 10px;
-            border: 2px solid;
-            border-color: #555555 #000000 #000000 #555555;
-            background: #3a3a3a;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 1px 1px 0px #000;
-            text-align: center;
-        }
-        .option-btn:hover {
-            background: #4a4a4a;
-        }
-        .option-btn:active {
-            border-color: #000000 #555555 #555555 #000000;
-            background: #3a3a3a;
-            transform: translateY(1px);
-            box-shadow: none;
-        }
-        .description {
-            font-size: 14px;
-            background: #003366;
-            color: #ffffff;
-            padding: 15px;
-            border: 2px solid #555555;
-            box-shadow: inset -2px -2px #444444, inset 2px 2px #000000;
-            margin-bottom: 60px;
-        }
-        .copyright {
-            background: #1c1c1c;
-            color: #e0e0e0;
-            text-align: center;
-            font-size: 13px;
-            padding: 16px 12px;
-            border: 1px solid #444444;
-            border-radius: 4px;
-            box-shadow: inset 0 0 0 1px #2c2c2c;
-            font-family: "MS Sans Serif", "Segoe UI", "Arial", sans-serif;
-            margin-top: 330px;
-        }
-        @media (max-width: 768px) {
-            .page-frame {
-            max-width: 95%;
-            padding: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="color-scheme" content="dark light">
+  <title>资源共享</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="custom-body">
-    <div class="page-frame">
-        <div class="site-header">
-            <h1>旨在为所有人提供方便的信息，资源获取服务！</h1>
-        </div>
-        <div class="content-area">
-            <h2>功能选择</h2>
-            <div class="button-group">
-                <button class="option-btn">软件资源</button>
-                <button class="option-btn">各类书籍</button>
-                <button class="option-btn">信息媒体</button>
-                <button class="option-btn">操作系统</button>
-            </div>
-            <div class="description">
-                本网站属测试版，如有任何使用问题或建议欢迎联系。
-            </div>
-        </div>
-        <footer class="copyright">
-        &copy; 本网站内资源等一切内容均取自互联网，如有侵权请联系删除。
-        </footer>
-    </div>
+<body>
+  <div class="page-frame">
+    <header class="site-header">
+      <h1>旨在为所有人提供方便的信息，资源获取服务！</h1>
+    </header>
+
+    <main class="content-area">
+      <h2>功能选择</h2>
+      <div class="button-group">
+        <button class="option-btn">软件资源</button>
+        <button class="option-btn">各类书籍</button>
+        <button class="option-btn">信息媒体</button>
+        <button class="option-btn">操作系统</button>
+      </div>
+      <div class="description">
+        本网站属测试版，如有任何使用问题或建议欢迎联系。
+      </div>
+    </main>
+
+    <footer class="copyright">
+      &copy; 本网站内资源等一切内容均取自互联网，如有侵权请联系删除。
+    </footer>
+  </div>
 </body>
 </html>
